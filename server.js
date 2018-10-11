@@ -7,7 +7,7 @@ const bodyParser = require('body-parser')
 const jsonParser = bodyParser.json()
 
 async function login(jar, client_id, email, password, login_type) {
-  const body = await request.post('https://ssl.jobcan.jp/login/pc-employee', {jar, followAllRedirects: true, form: {
+  const body = await request.post('https://ssl.jobcan.jp/login/pc-employee/old', {jar, followAllRedirects: true, form: {
     client_id, email, password, login_type, url: '/employee'
   }})
   return Promise.resolve(body)
